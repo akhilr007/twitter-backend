@@ -1,7 +1,7 @@
 import mongoose from "mongoose";
 
-const tweetSchema =
-  ({
+const tweetSchema = new mongoose.Schema(
+  {
     content: {
       type: String,
       required: true,
@@ -10,11 +10,12 @@ const tweetSchema =
     hashtags: [
       {
         type: mongoose.Schema.Types.ObjectId,
-        ref: "Hashtag",
+        ref: "HashTag",
       },
     ],
   },
-  { timestamps: true });
+  { timestamps: true }
+);
 
 const Tweet = mongoose.model("Tweet", tweetSchema);
 export default Tweet;
