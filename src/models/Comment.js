@@ -1,6 +1,6 @@
 import mongoose from "mongoose";
 
-const CommentSchema = new mongoose.Schema(
+const commentSchema = new mongoose.Schema(
   {
     content: {
       type: String,
@@ -21,9 +21,15 @@ const CommentSchema = new mongoose.Schema(
       required: true,
       refPath: "onModel",
     },
+    comments: [
+      {
+        type: mongoose.Schema.Types.ObjectId,
+        ref: "Comment",
+      },
+    ],
   },
   { timestamps: true }
 );
 
-const Comment = mongoose.model("Comment", CommentSchema);
+const Comment = mongoose.model("Comment", commentSchema);
 export default Comment;
