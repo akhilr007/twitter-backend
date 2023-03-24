@@ -7,7 +7,7 @@ import {
   AWS_SECRET_ACCESS_KEY,
   ACCESS_KEY_ID,
   BUCKET_NAME,
-} from "./serverConfig";
+} from "./serverConfig.js";
 
 aws.config.update({
   region: AWS_REGION,
