@@ -20,3 +20,7 @@
     - Pagination on tweets
 
     - Every tweet might be having a hashtag
+
+https://solaaremupelumi.medium.com/using-es6-import-and-export-statements-for-jest-testing-in-node-js-b20c8bd9041c
+
+at root instead of babel.config.js use babel.config.cjs
